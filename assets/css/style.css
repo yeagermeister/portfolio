@@ -4,46 +4,14 @@
     --blue: #5c8da5;
     --light-grey: #d9dcd6;
     --darkblue: rgb(36, 36, 109);
-
 }
+
 html {
     /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
     font-size: 62.5%;
   }
 
   /* setting some defaults for the page */
-
-
-
-/* I decided to put the header into the flex layout of the page.  The background is not part of the flex layout */
-.background {
-    height: 350px;
-    width: 100%;
-    background-image: url("../images/profile-pic.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* bgtest is for the floating subtitle above the background picture */
-.bgtext {
-    position: absolute;
-    top: 370px;
-    right: 100px;
-}
-
-.bgtext p {
-    background-color: var(--blue);
-    color: black;
-    font-size: 4rem;
-    padding: 4px;
-}
-
-/* The main flex layout starts here, as well as setting the background color for the page */
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--light-grey);
-}
 
 /* The header is be flexbox within flexbox.  Instead of using <nav> the navigation items are flex items */
 .header {
@@ -78,17 +46,43 @@ html {
     flex: 1 0 28%
 }
 
-/* The main section of the page formatting starts here.  Titlecards are for the section titles on the left of the page */
+/*The background is not part of the flex layout */
+.background {
+    height: 350px;
+    width: 100%;
+    background-image: url("../images/profile-pic.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* bgtext is for the floating subtitle above the background picture */
+.bgtext {
+    position: absolute;
+    top: 370px;
+    right: 100px;
+}
+
+.bgtext p {
+    background-color: var(--blue);
+    color: black;
+    font-size: 4rem;
+    padding: 4px;
+}
+/* The main flex container starts here, as well as setting the background color for the page */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--light-grey);
+}
+/*  Titlecards are for the section titles on the left of the page */
 .main-titlecard {
     flex: 0 0 25%;
     margin: 30px 0px 10px 0px;
 }
 
 .main-titlecard p {
-    align-content: right;
     margin: 3px 3px 3px 0px;
     font-size: 5rem;
-    color: var(--grey);
     text-align: end;
     padding-right: 5px;
     color: var(--darkblue);
@@ -97,15 +91,14 @@ html {
 /* This is the card for the content blocks on the right side of the page */
 .main-content {
     flex: 0 0 70%;
-    display: inline-block;
-    font-size: 2rem;
-    color: var(--grey);
     border-left: 5px solid var(--darkblue);
     padding-left: 30px;
     margin: 30px 0px 10px 0px;
+    font-size: 2rem;
+    color: var(--grey);
 }
 
-/* The My Work content is another flexbox with flexbox area.  .work sets the new flexbox*/
+/* Making another flexbox container for the work cards*/
 .work {
     display: flex;
     flex-wrap: wrap;
@@ -116,19 +109,19 @@ html {
     flex: 1 0 90%;
     border: 5px solid var(--blue);
     margin: 3px;
-    text-decoration: none;
-}
+    padding-bottom: -3px;
+    /* text-decoration: none; */
+} 
 
 /* These classes are for the tag over the picture */
 .card-p {
     background-color: var(--blue);
     color: black;
     font-size: 1rem;
-    position: relative;
-    width: 20%;
-    padding: 4px 4px 4px 20px;
-    margin-top: -60px;
-    margin-bottom: 22px;
+    position: absolute;
+    width: fit-content;
+    padding: 1% 1% 1% 5%;
+    margin: -7% 0% 0% 0%;
 }
 
 .card-heading {
@@ -139,19 +132,19 @@ html {
 .work-card {
     flex: 1 0 40%;
     border: 5px solid var(--blue);
-    margin: 5px;
+    margin: 3px;
     text-decoration: none;
 }
 
 /* This class forces the pictures to cover the whole box */
 .img {
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
-    vertical-align: bottom;
+    height: 100%;
 }
 
 /* This section covers the formating for the contact me content  */
-.main article ul li{  
+.main section ul li{  
     display: inline-block;
     text-align: center;
     padding: 15px 40px 0px 40px;
@@ -160,8 +153,91 @@ html {
     color: var(--darkblue);
 }
 
-.main article ul li a {
+.main section ul li a {
     color: var(--darkblue);
 }
 
 /* Due to requirements only being given for layout on a large screen, I did not implement a mobile first philosohy */
+@media screen and (max-width: 768px) {
+    /* This section fixes the header for mobile devices */
+    .header {
+        display: flex;
+        flex-wrap: no wrap;
+        flex-direction: column;
+        flex: 1 0 100%;
+        align-items: flex-start;
+        background-color: var(--grey);
+        padding: 20px 0px;
+    }
+
+    .header-h1 {
+        background-color: var(--blue);
+        font-size: 5rem;
+        text-align: left;
+        padding: 5px 5px 5px 80px;
+    }
+
+    .header-card {
+        align-items: left;
+        padding: 4px;
+    }
+
+    /* This section takes care of the background and subtitle */
+    .background {
+        height: 150px;
+        width: 100%;
+    }
+
+    .bgtext {
+        top: 360px;
+        right: 50px;
+    }
+
+    .bgtext p {
+        font-size: 2rem;
+    }
+
+    /* This section allows the title cards to grow now that they are on top of the content cards and cleans up the formatting to make it look nice*/
+    /* It also moves the bar between title sections and content sections */
+    .main-titlecard {
+        flex: 1 0 25%;
+    }
+
+    .main-titlecard p {
+        justify-content: flex-start;
+        text-align: start;
+        margin-left: 30px;
+    }
+
+    .main-content {
+        border-top: 5px solid var(--darkblue);
+        border-left: 0px;
+        padding-left: 3px;
+        margin: 0px 0px 10px 30px;
+    }
+
+    .main-content  {
+        padding-top: 5px;
+    }
+
+    /* This section changes the layout for the work content section and cleans up the formatting for this screen size */
+    .work{
+        flex-direction: column;
+    }
+    
+    .work-big {
+        flex: 1 0 100%;
+        margin: 5px;
+    }
+    
+    .card-p {
+        width: 35%;
+        margin: -10% 0% 8.3% 0%;
+        font-size: .9rem;
+    }
+
+    .card-p h2{
+        font-size: 1.4rem;
+    }
+
+}

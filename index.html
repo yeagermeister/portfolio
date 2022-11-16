@@ -15,91 +15,93 @@
     <p>Fixing things since 1975!</p>
 </div>
 
+<!-- THe header is a flex container and the navigation functions will be handled as felx items -->
 <header class="header">
     <h1 class="header-h1">
         Yeagermeister
     </h1>
-    <div class="header-blank"><!--blank space--></div>
-    <div class="header-card">
+    <section class="header-blank"><!--blank space--></section>
+    <section class="header-card">
         <a href="#about">About Me</a>
-    </div>
-    <div class="header-card">
+    </section>
+    <section class="header-card">
         <a href="#work">My Work</a>
-    </div>
-    <div class="header-card">
+    </section>
+    <section class="header-card">
         <a href="#contact">Contact</a>
-    </div>
-    <div class="header-card">
-        <a href="#">Resume</a>
-    </div>
+    </section>
+    <section class="header-card">
+        <a href="./assets/files/resume.doc">Resume</a>
+    </section>
 </header>
 
+<!-- The main section of the page is a big flex container with "Title Cards" and "Content Cards" as flex items -->
 <main class="main">
-    <div class="background">
-    </div>
+    <background class="background"></background>
 
-    <article class="main-titlecard" id="about">
+    <section class="main-titlecard" id="about">
         <p>About Me</p>
-    </article>
-    <article class="main-content">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </article>
-    <article class="main-titlecard" id="work">
+    </section>
+    <section class="main-content">
+        <p>I have 30 years of experience in the telecommunications industry.  I currently work at Lumen Technologies, managing a team of network engineers resonsible for traffic engineering and network diversity on the world's largest network.  OVer the last two years, we have been transforming my department to be on the forefront of network automation, utilizing Itential, Ansible, Python, Perl to automate common netork tasks.  MOst automations utilize the web as a front end.  Understanding full stack development will allow me to lead this team succesfully into the future.</p>
+    </section>
+    <section class="main-titlecard" id="work">
         <p>My Work</p>
-    </article>
-    <article class="main-content">
-        <section class="work">
-            <a class="work-big" href="https://www.youtube.com/watch?v=BWl84yzBE6g">
-                <div>
-                    <img class="img" src="./assets/images/hiking-cropped.JPG" alt="Picture of the Grand Canyon">
-                    <div class="card-p">
-                        <h2 class="card-heading">Hiking Forum</h2>
-                        MERN stack
-                    </div>
-                </div>
-            </a>
-            <a class="work-card" href="#">
-                <div>
+    </section>
+    <!-- the main content section is another flex container within a flex container in order to allow positioning of the work-cards -->
+    <section class="main-content">
+        <article class="work">
+            <div class="work-big">
+                <a href="https://www.youtube.com/watch?v=BWl84yzBE6g">
+                    <img class="img" src="./assets/images/hiking-cropped2.JPG" alt="Picture of the Grand Canyon">
+                        <div class="card-p">
+                            <h2 class="card-heading">Hiking Forum</h2>
+                            MERN stack
+                        </div>
+                </a>
+            </div>
+            <div class="work-card">
+                <a href="#">
                     <img class="img" src="./assets/images/balloons.JPG" alt="picture of a hot air balloon rally">
                     <div class="card-p">
                         <h2 class="card-heading">Coding</h2>
                         Node IOT
                     </div>
-                </div>
-            </a>
-            <a class="work-card" href="#">
-                <div>
+                </a>
+            </div>
+            <div class="work-card">
+                <a href="#">
                     <img class="img" src="./assets/images/petrified-wood.JPG" alt="picture of petrified wood">
                     <div class="card-p">
                         <h2 class="card-heading">Calculator</h2>
                         React/Javascript/CSS
                     </div>
-                </div>
-            </a>
-            <a class="work-card" href="#">
-                <div>
+                </a>
+            </div>
+            <div class="work-card">
+                <a href="#">
                     <img class="img" src="./assets/images/snake.JPG" alt="picture of a canyon rattle snake">
                     <div class="card-p">
-                        <h2 class="card-heading">Travel</h2>
-                        MERN stack
+                        <h2 class="card-heading">Contstruction</h2>
+                        CSS
                     </div>
-                </div>
-            </a>
-            <a class="work-card" href="#">
-                <div>
+                </a>
+            </div>
+            <div class="work-card">
+                <a href="#">
                     <img class="img" src="./assets/images/elk.JPG" alt="picture of an elk">
                     <div class="card-p">
                         <h2 class="card-heading">DIY</h2>
                         HTML/CSS
                     </div>
-                </div>
-            </a>
-        </section>
-    </article>
-    <article class="main-titlecard" id="contact">
+                </a>
+            </div>
+        </article>
+    </section>
+    <section class="main-titlecard" id="contact">
         <p>Contact Me</p>
-    </article>
-    <article class="main-content">
+    </section>
+    <section class="main-content">
         <ul>
             <li>
                 <a href="tel:555-555-1212">555-555-1212</a>
@@ -117,7 +119,7 @@
                 <a href="#">Linked In</a>
             </li>
         </ul>
-    </article>
+    </section>
 </main>
 </body>
 </html>
