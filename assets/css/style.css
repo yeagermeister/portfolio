@@ -110,18 +110,22 @@ html {
     border: 5px solid var(--blue);
     margin: 3px;
     padding-bottom: -3px;
-    /* text-decoration: none; */
+
 } 
 
 /* These classes are for the tag over the picture */
-.card-p {
-    background-color: var(--blue);
+.a {
+    text-decoration: none;
     color: black;
     font-size: 1rem;
-    position: absolute;
+}
+
+.card-p {
+    background-color: var(--blue);
+    position: relative;
     width: fit-content;
     padding: 1% 1% 1% 5%;
-    margin: -7% 0% 0% 0%;
+    margin: -15% 0% 10.3% 0%;
 }
 
 .card-heading {
@@ -133,7 +137,7 @@ html {
     flex: 1 0 40%;
     border: 5px solid var(--blue);
     margin: 3px;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 /* This class forces the pictures to cover the whole box */
@@ -213,31 +217,30 @@ html {
         border-top: 5px solid var(--darkblue);
         border-left: 0px;
         padding-left: 3px;
-        margin: 0px 0px 10px 30px;
-    }
-
-    .main-content  {
         padding-top: 5px;
+        margin: 0px 0px 10px 30px;
     }
 
     /* This section changes the layout for the work content section and cleans up the formatting for this screen size */
     .work{
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     
     .work-big {
         flex: 1 0 100%;
         margin: 5px;
     }
+    .work-card {
+        flex: 1 0 100%;
+    }
     
     .card-p {
-        width: 35%;
-        margin: -10% 0% 8.3% 0%;
+        width: 50%;
+        /* margin: -0% 0% 0% 0%; */
         font-size: .9rem;
     }
 
     .card-p h2{
         font-size: 1.4rem;
     }
-
 }

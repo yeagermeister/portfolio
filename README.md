@@ -1,7 +1,7 @@
 # portfolio
 My online portfolio page
 
-This is a simle webpage to catalog the different websites I've developed.
-<img src="">
+This is a simple webpage to catalog the different websites I've developed.
+<img src="./assets/images/profile-pic.JPG">
      
-Lease vist the site <a href=">here.</a>
+Please visit the site <a href="">here.</a>
