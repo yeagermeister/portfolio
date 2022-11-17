@@ -11,9 +11,7 @@ html {
     font-size: 62.5%;
   }
 
-  /* setting some defaults for the page */
-
-/* The header is be flexbox within flexbox.  Instead of using <nav> the navigation items are flex items */
+/* Header Secion  Instead of using <nav> the navigation items are flex items */
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +30,7 @@ html {
     padding: 5px 5px 5px 0px;
 }
 
-/* The header-cards take the place of the nav items.  the header-blank allows for space in between the site header and the nav items */
+/* The header-cards take the place of the nav items.  The header-blank allows for space in between the site header and the nav items */
 .header-card {
     flex: 1 0 10%;
     font-size: 3rem;
@@ -108,7 +106,8 @@ html {
 .work-big {
     flex: 1 0 90%;
     border: 5px solid var(--blue);
-    background-color: var(--blue);
+    background-color: var(--blue); /*setting the background to the same color as the border got rid of the 
+    small white lines that would appear when the window was resized */
     margin: 3px;
 } 
 
@@ -222,10 +221,7 @@ html {
     }
 
     /* This section changes the layout for the work content section and cleans up the formatting for this screen size */
-    .work{
-        /* flex-direction: column; */
-    }
-    
+
     .work-big {
         flex: 1 0 100%;
         margin: 5px 5px 5px 4px;
@@ -236,7 +232,6 @@ html {
     
     .card-text {
         width: 50%;
-        /* margin: -0% 0% 0% 0%; */
         font-size: .9rem;
     }
 
