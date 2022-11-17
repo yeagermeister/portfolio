@@ -228,13 +228,13 @@ html {
     
     .work-big {
         flex: 1 0 100%;
-        margin: 5px;
+        margin: 5px 5px 5px 4px;
     }
     .work-card {
         flex: 1 0 100%;
     }
     
-    .card-p {
+    .card-text {
         width: 50%;
         /* margin: -0% 0% 0% 0%; */
         font-size: .9rem;
